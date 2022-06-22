@@ -1,0 +1,116 @@
+/* start variables */
+:root {
+  --color-primary: #bd9030;
+}
+/* end variables */
+
+body {
+  background-color: black !important;
+}
+
+/* start first container classes */
+.container-1 {
+  height: fit-content !important;
+  margin-top: 10px !important;
+
+  border: 0.5px solid var(--color-primary);
+  color: var(--color-primary);
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+/* end first container classes */
+.isOpen {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-top: 5px;
+}
+
+/* start live metal prices*/
+/* .live-prices-card
+ {
+  height: .5% !important;
+} */
+.chartSelect {
+  background: none !important;
+  color: white !important;
+  border: none !important;
+}
+.chartSelect:focus {
+  box-shadow: none !important;
+}
+
+/* end live metal prices*/
+/* start instant buy and sell form */
+.formButton,
+.priceLimitInput,
+.orderType {
+  width: 49% !important;
+}
+.buyBtn {
+  border-bottom: 5px solid var(--color-primary) !important;
+}
+
+.formInput {
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid #3a3a3a !important;
+}
+.quantityFiled,
+.priceLimit,
+.OrderValueSummary,
+.goldBalance {
+  background-color: black !important;
+  border: 1px solid #3a3a3a !important;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+.static-value{
+	position:absolute;
+	right:3px;
+	font-weight:bold;
+	font-size:0.8em;
+	top:9px;
+}
+.OrderValueSummary {
+  background-color: #323232 !important;
+}
+p {
+  margin: 0 !important;
+  padding: 8px;
+}
+/* end instant buy and sell form */
+
+/* start Account balance section */
+/* bars icon */
+.icon {
+  margin-top: 8px;
+}
+.icon div {
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 0 0 6px 0;
+}
+.goldBalance {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.goldBalance > div {
+  padding-top: 8px;
+}
+.goldBalance div p {
+  color: var(--color-primary);
+  padding: 3px;
+}
+/* end Account balance section */

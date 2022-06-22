@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goldady</title>
+    <meta name="description" content="This is task 1 of front-end internship">
+    <!-- Start import css files -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" />
+    <!-- End css files -->
+    <!-- import chart files -->
+
+</head>
+
+<body>
+    <div class="container-fluid p-5">
+        <div class="row ">
+            <!-- start Live metal prices -->
+            <div class="col  me-4  ">
+                <!-- start Live metal card -->
+                <div class="live-prices-card container-1 mb-4 p-2">
+                    <div class="d-flex justify-content-between mb-4">
+                        <div>
+                            <h5>Live metal prices</h5>
+                        </div>
+                        <div class="text-success d-flex justify-content-between fw-bold ">
+                            <p class="p-0 me-2">Market Is Open </p>
+                            <div class="bg-success isOpen "></div>
+                        </div>
+                    </div>
+                    <div class="mb-3 row  goldBalance ">
+                        <p class=" text-light col-4 ">Gold balance</p>
+                        <div class="col">
+                            <div class="d-flex   justify-content-between">
+                                <p class=" text-success">Buy</p>
+                                <p class=" text-success"><i class="fa fa-caret-up"></i> EGP 980.00</p>
+
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-danger">Sell</p>
+                                <p class=" text-danger ">
+                                    <i class="fa fa-caret-down"></i> EGP 970.00
+                                </p>
+
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p class=" text-light ">Daily change</p>
+                                <p class=" text-light ">EGP 5.0</p>
+
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p class=" text-light "> Daily change %</p>
+                                <p class=" text-light ">% 0.1</p>
+
+                            </div>
+
+
+
+                            <!-- <input class=" text-light" style="background-color:black ;border:none" value='EGP00.0'/>  -->
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- start Live metal card -->
+
+                <!-- start chart card -->
+                <div class="chart container-1 p-2">
+                    <h5 class="d-inline-block">
+                        Price charts :
+                    </h5>
+                    <div class="mt-3 w-25 d-inline-block">
+                        <select class="form-select fw-bold"
+                            style="color:white;border:none;border-radius: 0.25rem;background-color: black;">
+                            <option selected>Gold</option>
+                            <option>Salver</option>
+                            <option>Platinum</option>
+                        </select>
+                    </div>
+                    <canvas id="lineChart" height="120" width="400"></canvas>
+                    <div class="mt-3 w-50">
+                        <select class="form-select "
+                            style="color:white;border:1px solid #bd9030;border-radius: 0.25rem;background-color: black;">
+                            <option selected>Day</option>
+                            <option>Week</option>
+                            <option>Month</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- end chart card -->
+            </div>
+            <!-- end Live metal prices -->
+            <!-- start instant buy and sell -->
+            <div class="col container-1 me-4 p-2">
+                <div>
+                    <h5 class="mb-5">Instant buy and sell</h5>
+                    <!-- start form -->
+                    <form>
+                        <!-- Start form buttons -->
+                        <button class="btn btn-secondary formButton buyBtn fw-bold mb-3">BUY</button>
+                        <button class="btn btn-secondary formButton fw-bold mb-3" disabled>SELL</button>
+                        <!-- End form buttons -->
+
+                        <div class="mb-3">
+                            <select class="form-select formInput">
+                                <option>Gold</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 d-flex justify-content-between quantityFiled ">
+                            <p class=" text-light">Quantity</p>
+                            <div class="d-inline-block position-relative w-25">
+                                <label for="quantity" class="static-value text-light">gm</label>
+                                <input id='quantity' class=" text-light w-100"
+                                    style="padding:8px;color:white;background-color:black ;border:none" value="123" />
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3 d-flex justify-content-between">
+                            <div class="mb-3 me-2  orderType">
+                                <select class="form-select p-2 formInput">
+                                    <option>Order type</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3 d-flex justify-content-between priceLimit formInput priceLimitInput">
+                                <p class=" text-light ">Price limit</p>
+                                <div class="d-inline-block position-relative w-50">
+                                    <label for="priceLimit" class="static-value text-light"
+                                        style="top:10px;">EGP</label>
+                                    <input id='priceLimit' class=" text-light w-100"
+                                        style="padding:8px;color:white;background-color:black ;border:none"
+                                        value="00.00" />
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="mb-5 d-flex justify-content-between OrderValueSummary ">
+                            <p class=" text-light">Order value summary</p>
+                            <p class=" text-light">00000000</p>
+
+                        </div>
+
+                        <div class="d-flex justify-content-between ">
+                            <button type="submit" class="btn btn-secondary  px-4">Reset</button>
+                            <button type="submit" class="btn btn-success px-4">Preview</button>
+                        </div>
+
+                        </fieldset>
+                    </form>
+                    <!-- end form -->
+                </div>
+            </div>
+            <!-- end instant buy and sell -->
+
+            <!-- start account balance  -->
+            <div class="col container-1 me-4  p-2">
+                <!-- start header -->
+                <div class="d-flex justify-content-between mb-4">
+                    <h5>Account Balance</h5>
+                    <div class="icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <!-- end header -->
+                <!-- start cards -->
+                <div class="mb-3 row  goldBalance ">
+                    <p class=" text-light col-4 ">Gold balance</p>
+                    <div class="col">
+                        <div class="d-flex justify-content-between">
+                            <p>Available</p>
+                            <p class=" text-light fw-bold">1350gm</p>
+
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Withdrawal</p>
+                            <p class=" text-light ">EGP 92.275.00</p>
+
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Total</p>
+                            <p class=" text-light ">100gm</p>
+
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Value</p>
+                            <p class=" text-light ">10gm</p>
+
+                        </div>
+
+                        <!-- <input class=" text-light" style="background-color:black ;border:none" value='EGP00.0'/>  -->
+
+                    </div>
+                </div>
+                
+                <div class="mb-3 d-flex justify-content-between priceLimit formInput ">
+                    <p class=" text-light ">Cash balance</p>
+                    <!-- Will be a dynamic value come from server -->
+                    <p class=" text-light fw-bold ">EGP 100.000.00</p>
+
+                </div>
+                <div class="mb-3 d-flex justify-content-between priceLimit formInput ">
+                    <p class=" text-light ">Unrealized P/L</p>
+                    <!-- Will be a dynamic value come from server -->
+
+                    <p class=" text-light ">EGP 950.024.00</p>
+
+                </div>
+                <div class="mb-3 d-flex justify-content-between priceLimit formInput ">
+                    <p class=" text-light ">Funds in Withdrawal</p>
+                    <!-- Will be a dynamic value come from server -->
+
+                    <p class=" text-light ">EGP 950.024.00</p>
+
+                </div>
+                <div class="mb-3 d-flex justify-content-between priceLimit formInput ">
+                    <p class=" text-light ">Portfolio value</p>
+                    <!-- Will be a dynamic value come from server -->
+
+                    <p class=" text-light ">EGP 90.183</p>
+
+                </div>
+                <!-- end cards -->
+
+            </div>
+            <!-- end account balance  -->
+
+        </div>
+
+    </div>
+    </div>
+
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.js"
+        integrity="sha512-5m2r+g00HDHnhXQDbRLAfZBwPpPCaK+wPLV6lm8VQ+09ilGdHfXV7IVyKPkLOTfi4vTTUVJnz7ELs7cA87/GMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
