@@ -8,7 +8,11 @@ body {
   background-color: black !important;
 }
 
-/* start first container classes */
+/* start shared classes */
+input:focus{
+  box-shadow: none !important;
+  border: 0.5px solid rgba(59, 56, 56, 0.973) !important;
+}
 .container-1 {
   height: fit-content !important;
   margin-top: 10px !important;

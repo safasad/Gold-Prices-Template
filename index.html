@@ -20,7 +20,7 @@
     <div class="container-fluid p-5">
         <div class="row ">
             <!-- start Live metal prices -->
-            <div class="col  me-4  ">
+            <div class="col  me-4 p-0  ">
                 <!-- start Live metal card -->
                 <div class="live-prices-card container-1 mb-4 p-2">
                     <div class="d-flex justify-content-between mb-4">
@@ -110,15 +110,19 @@
                                 <option>Gold</option>
                             </select>
                         </div>
-                        <div class="mb-3 d-flex justify-content-between quantityFiled ">
-                            <p class=" text-light">Quantity</p>
-                            <div class="d-inline-block position-relative w-25">
-                                <label for="quantity" class="static-value text-light">gm</label>
-                                <input id='quantity' class=" text-light w-100" maxlength="7"
-                                    style="padding:8px;color:white;background-color:black ;border:none" value="123" />
+                         <div class="mb-3 d-flex justify-content-between priceLimit formInput priceLimitInput w-100">
+                                <label class=" text-light p-2 ">Quantity</label>
+                                <div class="input-group w-25">
+
+                                    <input class=" text-light form-control" 
+                                        style="width:52%;padding:8px;color:white;background-color:black ;border:none"
+                                        value="0" />
+                                    <span for="priceLimit" class="input-group-text text-light fw-bold  "
+                                        style="font-size:10px;padding:8px;color:white;background-color:black ;border:none">gm</span>
+                                </div>
+
                             </div>
 
-                        </div>
 
                         <div class="mb-3 d-flex justify-content-between">
                             <div class="mb-3 me-2  orderType">
@@ -127,14 +131,15 @@
                                 </select>
                             </div>
 
-                            <div class="mb-3 d-flex justify-content-between priceLimit formInput priceLimitInput">
-                                <p class=" text-light ">Price limit</p>
-                                <div class="d-inline-block position-relative w-50">
-                                    <label for="priceLimit" class="static-value text-light"
-                                        style="top:10px;">EGP</label>
-                                    <input id='priceLimit' class=" text-light w-100" maxlength="5 "
-                                        style="padding:8px;color:white;background-color:black ;border:none"
+                            <div class="mb-3 d-flex justify-content-between priceLimit formInput priceLimitInput ">
+                                <label class=" text-light p-2 ">Price limit</label>
+                                <div class="input-group w-50">
+
+                                    <input id='priceLimit' class=" text-light form-control" 
+                                        style="width:52%;padding:8px;color:white;background-color:black ;border:none"
                                         value="00.00" />
+                                    <span for="priceLimit" class="input-group-text text-light fw-bold  "
+                                        style="font-size:10px;padding:8px;color:white;background-color:black ;border:none">EGP</span>
                                 </div>
 
                             </div>
@@ -201,7 +206,7 @@
 
                     </div>
                 </div>
-                
+
                 <div class="mb-3 d-flex justify-content-between priceLimit formInput ">
                     <p class=" text-light ">Cash balance</p>
                     <!-- Will be a dynamic value come from server -->
