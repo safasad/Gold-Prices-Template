@@ -1,5 +1,7 @@
 let chart = document.getElementById("lineChart");
-const myChart = new Chart(chart, {
+
+//* Create chart for gold prices and fill it with data
+const lineChart = new Chart(chart, {
   type: "line",
   data: {
     labels: [
@@ -8,7 +10,7 @@ const myChart = new Chart(chart, {
     ],
     datasets: [
       {
-        label: "price in EGP",
+        label: "Price in EGP",
         data: [
           0, 10, 5, 13, 7, 10, 16, 6, 13, 5, 12, 7, 16, 8, 10, 5, 9, 2, 11, 5,
           7,
@@ -21,3 +23,61 @@ const myChart = new Chart(chart, {
     ],
   },
 });
+
+/*--------------------*/
+
+//* Declare variables and select HTML elements
+const buyForm = document.getElementById("buyForm");
+const sellForm = document.getElementById("sellForm");
+const buyBtn = document.getElementById("buyBtn");
+const sellBtn = document.getElementById("sellBtn");
+const buyBtn2 = document.getElementById("buyBtn2");
+const sellBtn2 = document.getElementById("sellBtn2");
+
+//* Handle submit buy form (Prevent page refresh)
+buyForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
+//* Handle submit sell form (Prevent page refresh)
+sellForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
+/**
+ * Display buy form when BUY tab clicked
+ */
+const showBuyForm = () => {
+  //* Change display of Buy form to appear
+  buyForm.style.display = "block";
+
+  //* Change display of Sell form to disappear
+  sellForm.style.display = "none";
+
+  //* Change tabs styles (activate and deactivate)
+  buyBtn.classList.add("activeBtn");
+  sellBtn.classList.add("inactiveBtn");
+};
+
+/**
+ * Display sell form when SELL tab clicked
+ */
+const showSellForm = () => {
+  //* Change display of Sell form to appear
+  sellForm.style.display = "block";
+
+  //* Change display of Buy form to disappear
+  buyForm.style.display = "none";
+
+  //* Change tabs styles (activate and deactivate)
+  sellBtn2.classList.add("activeBtn");
+  buyBtn2.classList.add("inactiveBtn");
+};
+
+//* Add event listeners to buy and sell buttons for buy form
+buyBtn.addEventListener("click", showBuyForm);
+sellBtn.addEventListener("click", showSellForm);
+
+//* Add event listeners to buy and sell buttons for sell form
+buyBtn2.addEventListener("click", showBuyForm);
+sellBtn2.addEventListener("click", showSellForm);

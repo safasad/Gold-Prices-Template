@@ -9,7 +9,7 @@ body {
 }
 
 /* start shared classes */
-input:focus{
+input:focus {
   box-shadow: none !important;
   border: 0.5px solid rgba(59, 56, 56, 0.973) !important;
 }
@@ -79,19 +79,24 @@ input:focus{
   -ms-border-radius: 0.25rem;
   -o-border-radius: 0.25rem;
 }
-.static-value{
-	position:absolute;
-	right:3px;
-	font-weight:bold;
-	font-size:0.8em;
-	top:9px;
-}
+
 .OrderValueSummary {
   background-color: #323232 !important;
 }
 p {
   margin: 0 !important;
   padding: 8px;
+}
+.activeBtn {
+  border-bottom: 5px solid var(--color-primary) !important;
+}
+.inactiveBtn {
+  background-color: #323232 !important;
+  border: none !important;
+  color: rgba(255, 255, 255, 0.692) !important;
+}
+#sellForm{
+  display: none;
 }
 /* end instant buy and sell form */
 

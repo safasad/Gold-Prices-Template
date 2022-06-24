@@ -105,15 +105,18 @@
         <div class="col container-1 me-4 p-2">
           <div>
             <h5 class="mb-5">Instant buy and sell</h5>
-            <!-- start form -->
-            <form>
+            <!-- start buy form -->
+            <form id="buyForm">
               <!-- Start form buttons -->
-              <button class="btn btn-secondary formButton buyBtn fw-bold mb-3">
+              <button
+                class="btn btn-secondary formButton activeBtn fw-bold mb-3"
+                id="buyBtn"
+              >
                 BUY
               </button>
               <button
-                class="btn btn-secondary formButton fw-bold mb-3"
-                disabled
+                class="btn btn-secondary inactiveBtn formButton fw-bold mb-3"
+                id="sellBtn"
               >
                 SELL
               </button>
@@ -162,9 +165,9 @@
                 <div class="mb-3 me-2 orderType">
                   <select class="form-select p-2 formInput">
                     <option>Order type</option>
-                    <option> type 1</option>
-                    <option> type 2</option>
-                    <option> type 3</option>
+                    <option>type 1</option>
+                    <option>type 2</option>
+                    <option>type 3</option>
                   </select>
                 </div>
 
@@ -209,7 +212,7 @@
               </div>
 
               <div class="d-flex justify-content-between">
-                <button type="submit" class="btn btn-secondary px-4">
+                <button  type="submit" class="btn btn-secondary px-4">
                   Reset
                 </button>
                 <button type="submit" class="btn btn-success px-4">
@@ -218,6 +221,25 @@
               </div>
             </form>
             <!-- end form -->
+            <!-- start sell form -->
+            <form id="sellForm">
+              <!-- Start form buttons -->
+              <button
+                class="btn btn-secondary formButton buyBtn fw-bold mb-3"
+                id="buyBtn2"
+              >
+                BUY
+              </button>
+              <button
+                class="btn btn-secondary formButton fw-bold mb-3"
+                id="sellBtn2"
+              >
+                SELL
+              </button>
+              <!-- End form buttons -->
+            </form>
+
+            <!-- end sell form -->
           </div>
         </div>
         <!-- end instant buy and sell -->
