@@ -13,7 +13,11 @@ input:focus {
   box-shadow: none !important;
   border: 0.5px solid rgba(59, 56, 56, 0.973) !important;
 }
-button:focus , select:focus {
+input::placeholder {
+  color: white !important;
+}
+button:focus,
+select:focus {
   box-shadow: none !important;
 }
 .container-1 {
