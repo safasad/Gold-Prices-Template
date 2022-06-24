@@ -105,23 +105,23 @@
         <div class="col container-1 me-4 p-2">
           <div>
             <h5 class="mb-5">Instant buy and sell</h5>
+
+            <!-- Start sections  buttons -->
+            <button
+              class="btn btn-secondary formButton activeBtn fw-bold mb-3"
+              id="buyBtn"
+            >
+              BUY
+            </button>
+            <button
+              class="btn btn-secondary inactiveBtn formButton fw-bold mb-3"
+              id="sellBtn"
+            >
+              SELL
+            </button>
+            <!-- End sections buttons -->
             <!-- start buy form -->
             <form id="buyForm">
-              <!-- Start form buttons -->
-              <button
-                class="btn btn-secondary formButton activeBtn fw-bold mb-3"
-                id="buyBtn"
-              >
-                BUY
-              </button>
-              <button
-                class="btn btn-secondary inactiveBtn formButton fw-bold mb-3"
-                id="sellBtn"
-              >
-                SELL
-              </button>
-              <!-- End form buttons -->
-
               <div class="mb-3">
                 <select id="metalType" class="form-select formInput">
                   <option selected>Gold</option>
@@ -135,7 +135,7 @@
                 <label class="text-light p-2">Quantity</label>
                 <div class="input-group w-25">
                   <input
-                  id="quantity"
+                    id="quantity"
                     placeholder="0"
                     class="text-light form-control"
                     style="
@@ -148,7 +148,6 @@
                     value="0"
                   />
                   <span
-            
                     class="input-group-text text-light fw-bold"
                     style="
                       font-size: 10px;
@@ -209,11 +208,15 @@
                 class="mb-5 d-flex justify-content-between OrderValueSummary"
               >
                 <p class="text-light">Order value summary</p>
-                <p id='orderSummary' class="text-light">00000000</p>
+                <p id="orderSummary" class="text-light">00000000</p>
               </div>
 
               <div class="d-flex justify-content-between">
-                <button id="resetBtn"  type="submit" class="btn btn-secondary px-4">
+                <button
+                  id="resetBtn"
+                  type="submit"
+                  class="btn btn-secondary px-4"
+                >
                   Reset
                 </button>
                 <button type="submit" class="btn btn-success px-4">
@@ -224,20 +227,7 @@
             <!-- end form -->
             <!-- start sell form -->
             <form id="sellForm">
-              <!-- Start form buttons -->
-              <button
-                class="btn btn-secondary formButton buyBtn fw-bold mb-3"
-                id="buyBtn2"
-              >
-                BUY
-              </button>
-              <button
-                class="btn btn-secondary formButton fw-bold mb-3"
-                id="sellBtn2"
-              >
-                SELL
-              </button>
-              <!-- End form buttons -->
+              
             </form>
 
             <!-- end sell form -->

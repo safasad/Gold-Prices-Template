@@ -32,8 +32,6 @@ const sellForm = document.getElementById("sellForm");
 
 const buyBtn = document.getElementById("buyBtn");
 const sellBtn = document.getElementById("sellBtn");
-const buyBtn2 = document.getElementById("buyBtn2");
-const sellBtn2 = document.getElementById("sellBtn2");
 
 const metalTypeElement = document.getElementById("metalType");
 const orderTypeElement = document.getElementById("orderType");
@@ -62,6 +60,7 @@ const showBuyForm = () => {
   sellForm.style.display = "none";
 
   //* Change tabs styles (activate and deactivate)
+  buyBtn.classList.remove("inactiveBtn");
   buyBtn.classList.add("activeBtn");
   sellBtn.classList.add("inactiveBtn");
 };
@@ -77,17 +76,15 @@ const showSellForm = () => {
   buyForm.style.display = "none";
 
   //* Change tabs styles (activate and deactivate)
-  sellBtn2.classList.add("activeBtn");
-  buyBtn2.classList.add("inactiveBtn");
+  sellBtn.classList.remove("inactiveBtn");
+  sellBtn.classList.add("activeBtn");
+  buyBtn.classList.remove("activeBtn");
+  buyBtn.classList.add("inactiveBtn");
 };
 
 //* Add event listeners to buy and sell buttons for buy form
 buyBtn.addEventListener("click", showBuyForm);
 sellBtn.addEventListener("click", showSellForm);
-
-//* Add event listeners to buy and sell buttons for sell form
-buyBtn2.addEventListener("click", showBuyForm);
-sellBtn2.addEventListener("click", showSellForm);
 
 // * Handle Reset of  buy form
 
