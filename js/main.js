@@ -29,10 +29,17 @@ const lineChart = new Chart(chart, {
 //* Declare variables and select HTML elements
 const buyForm = document.getElementById("buyForm");
 const sellForm = document.getElementById("sellForm");
+
 const buyBtn = document.getElementById("buyBtn");
 const sellBtn = document.getElementById("sellBtn");
 const buyBtn2 = document.getElementById("buyBtn2");
 const sellBtn2 = document.getElementById("sellBtn2");
+
+const metalTypeElement = document.getElementById("metalType");
+const orderTypeElement = document.getElementById("orderType");
+const orderSummary = document.getElementById("orderSummary");
+const quantityElement = document.getElementById("quantity");
+const priceLimitElement = document.getElementById("priceLimit");
 
 //* Handle submit buy form (Prevent page refresh)
 buyForm.addEventListener("submit", (e) => {
@@ -82,16 +89,33 @@ sellBtn.addEventListener("click", showSellForm);
 buyBtn2.addEventListener("click", showBuyForm);
 sellBtn2.addEventListener("click", showSellForm);
 
-// * Handle Reset buy form
+// * Handle Reset of  buy form
 
 const resetBtn = document.getElementById("resetBtn");
 
 // * Reset Function
 const resetFun = () => {
-  document.getElementById("metalType").value = "Gold";
-  document.getElementById("quantity").value = "";
-  document.getElementById("priceLimit").value = "";
-  document.getElementById("orderType").value = "Order type";
+  // Set the value to the default values
+  metalTypeElement.value = "Gold";
+  quantityElement.value = "";
+  priceLimitElement.value = "";
+  orderTypeElement.value = "Order type";
+  orderSummary.innerHTML = "0.00";
 };
+
 // * Add event listener to reset button
 resetBtn.addEventListener("click", resetFun);
+
+// * Handle Order summary input
+
+// Add keyup event listener to quantity input field
+quantityElement.addEventListener("keyup", () => {
+  //* Set the innerHTML of the orderSummary element to the value of the quantity multiplied by the price limit
+  orderSummary.innerHTML = `${quantityElement.value * priceLimitElement.value}`;
+});
+
+// Add keyup event listener to price limit input field
+priceLimitElement.addEventListener("keyup", () => {
+  //* Set the innerHTML of the orderSummary element to the value of the quantity multiplied by the price limit
+  orderSummary.innerHTML = `${quantityElement.value * priceLimitElement.value}`;
+});
