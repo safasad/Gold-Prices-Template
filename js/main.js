@@ -81,3 +81,17 @@ sellBtn.addEventListener("click", showSellForm);
 //* Add event listeners to buy and sell buttons for sell form
 buyBtn2.addEventListener("click", showBuyForm);
 sellBtn2.addEventListener("click", showSellForm);
+
+// * Handle Reset buy form
+
+const resetBtn = document.getElementById("resetBtn");
+
+// * Reset Function
+const resetFun = () => {
+  document.getElementById("metalType").value = "Gold";
+  document.getElementById("quantity").value = "";
+  document.getElementById("priceLimit").value = "";
+  document.getElementById("orderType").value = "Order type";
+};
+// * Add event listener to reset button
+resetBtn.addEventListener("click", resetFun);
